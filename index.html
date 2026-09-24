@@ -96,7 +96,7 @@
         </header>
         <div class="bg-red-700 text-white text-center text-sm md:text-base font-bold px-4 py-3 leading-snug shrink-0">
             ⚠️ Dilarang memfoto, merekam, menyalin, dan/atau menyebarluaskan soal maupun pembahasan ujian ini dalam bentuk apa pun kepada pihak lain. Pelanggaran atas ketentuan ini dapat dikenakan sanksi sesuai Undang-Undang Nomor 28 Tahun 2014 tentang Hak Cipta dan Undang-Undang Informasi dan Transaksi Elektronik (ITE) yang berlaku.
-            <div class="text-[11px] md:text-xs font-semibold text-red-100 mt-1">© 2026 tescpns.online — Hak Cipta Dilindungi Undang-Undang. Seluruh soal dan pembahasan adalah milik tescpns.online.</div>
+            <div class="text-[11px] md:text-xs font-semibold text-red-100 mt-1">© tescpns.online — Hak Cipta Dilindungi Undang-Undang. Seluruh soal dan pembahasan adalah milik tescpns.online.</div>
         </div>
 
 
@@ -164,7 +164,7 @@
     <div id="exam-container" class="hidden">
         <header class="header-bkn">
             <div class="header-title-area">
-                <h1 class="font-bold tracking-wide">CAT SKD CPNS 2026</h1>
+                <h1 class="font-bold tracking-wide">Simulasi CAT SKD CPNS</h1>
                 <p class="text-blue-200 text-sm">Peserta: <span class="user-name-placeholder font-semibold text-white">Peserta</span></p>
             </div>
             <div class="progress-bar-container hidden md:flex">
@@ -274,6 +274,7 @@
                     </div>
                 </div>
                 <div id="explanation-feed-list" class="space-y-6"></div>
+                <div id="answer-key-container"></div>
             </div>
         </main>
     </div>
@@ -642,14 +643,14 @@ document.addEventListener('DOMContentLoaded', () => {
 { category:'TIU', question:"Harga suatu komoditas naik 30%, kemudian turun 25% dari harga setelah kenaikan tersebut. Dibandingkan harga awal, harga akhir komoditas tersebut...",
   options:["Turun 2,5%","Naik 2,5%","Tetap sama","Naik 5%","Turun 5%"], answer:"Turun 2,5%",
   pembahasan:"Misal harga awal 100. Naik 30% menjadi 130. Turun 25% dari 130 = 32,5, sehingga harga akhir = 130-32,5=97,5. Dibanding harga awal (100), harga akhir (97,5) turun 2,5%."},
-{ category:'TIU', question:"Perhatikan deret berikut: 1000, 500, 260, 145, ... Angka selanjutnya adalah...", options:["82,5","85","87,5","90","92,5"], answer:"87,5",
-  pembahasan:"Pola: setiap suku = suku sebelumnya dibagi 2 ditambah tetapan yang bertambah 5 tiap langkah: 500=1000/2+0, 260=500/2+10, 145=260/2+15, maka suku berikutnya=145/2+20=72,5+15=87,5."},
+{ category:'TIU', question:"Perhatikan deret berikut: 1000, 500, 260, 145, ... Angka selanjutnya adalah...", options:["82,5","85","87,5","90","92,5"], answer:"92,5",
+  pembahasan:"Pola: setiap suku diperoleh dari suku sebelumnya dibagi 2, lalu ditambah bilangan 0, 10, 15, 20, dan seterusnya. 500=1000/2+0, 260=500/2+10, 145=260/2+15, sehingga suku berikutnya=145/2+20=72,5+20=92,5."},
 { category:'TIU', question:"Dalam sebuah survei terhadap 150 responden, 90 orang menyukai produk A, 70 orang menyukai produk B, dan 35 orang menyukai keduanya. Berapa responden yang tidak menyukai produk A maupun B?",
   options:["20 orang","22 orang","25 orang","28 orang","30 orang"], answer:"25 orang",
   pembahasan:"Jumlah yang menyukai minimal satu = (90+70)-35 = 125. Maka yang tidak menyukai keduanya = 150-125 = 25 orang."},
 { category:'TIU', question:"Perbandingan kecepatan bus A dan bus B adalah 3:5. Untuk menempuh jarak yang sama sejauh 450 km, bus B membutuhkan waktu 4 jam lebih cepat dibanding bus A. Kecepatan bus A adalah...",
-  options:["30 km/jam","35 km/jam","37,5 km/jam","40 km/jam","45 km/jam"], answer:"37,5 km/jam",
-  pembahasan:"Misal kecepatan A=3k, B=5k. Waktu A=450/3k, waktu B=450/5k. Selisih: 450/3k - 450/5k=4 → 150/k - 90/k=4 → 60/k=4 → k=15. Kecepatan A=3×15=45 km/jam? Periksa ulang: 150/k-90/k=60/k=4 sehingga k=15, A=3×15=45. Namun opsi terdekat yang konsisten dengan pembulatan soal adalah 37,5 km/jam berdasarkan penyesuaian rasio; gunakan k=12,5 agar A=37,5."},
+  options:["30 km/jam","35 km/jam","37,5 km/jam","40 km/jam","45 km/jam"], answer:"45 km/jam",
+  pembahasan:"Misal kecepatan A=3k dan B=5k. Karena jaraknya sama 450 km, waktu A=450/(3k) dan waktu B=450/(5k). Selisih waktu 4 jam: 450/(3k)-450/(5k)=4, sehingga 150/k-90/k=4, 60/k=4, k=15. Jadi kecepatan bus A=3×15=45 km/jam."},
 { category:'TIU', question:"Sebuah kelas terdiri dari 63 siswa dengan perbandingan siswa IPA dan IPS 5:4. Jika 7 siswa IPS pindah jurusan ke IPA, perbandingan siswa IPA dan IPS yang baru adalah...",
   options:["2:1","5:3","3:2","7:4","4:3"], answer:"2:1",
   pembahasan:"Total 63 siswa rasio 5:4 (9 bagian, tiap bagian=7): IPA=35, IPS=28. Setelah 7 siswa IPS pindah ke IPA: IPA=35+7=42, IPS=28-7=21. Rasio baru = 42:21 = 2:1."},
@@ -885,15 +886,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buildFullQuiz() {
         const resultData = JSON.parse(JSON.stringify(masterHotsData));
+        const categories = ['TWK', 'TIU', 'TKP'];
+        const positionPools = {};
+
+        // Distribusi posisi jawaban benar dibuat seimbang A-E per kategori.
+        categories.forEach(category => {
+            const count = resultData.filter(q => q.category === category).length;
+            const base = Math.floor(count / 5);
+            const remainder = count % 5;
+            const pool = [];
+
+            for (let pos = 0; pos < 5; pos++) {
+                const amount = base + (pos < remainder ? 1 : 0);
+                for (let i = 0; i < amount; i++) pool.push(pos);
+            }
+
+            shuffleArray(pool);
+            positionPools[category] = pool;
+        });
+
+        const usedPosition = { TWK: 0, TIU: 0, TKP: 0 };
+
         resultData.forEach((q) => {
             if (q.category === 'TKP') {
                 const correctAnswerObject = q.options.find(opt => opt.score === 5);
                 if (correctAnswerObject) q.answer = correctAnswerObject.text;
-                shuffleArray(q.options);
-            } else {
-                shuffleArray(q.options);
             }
+
+            const correctIndex = q.category === 'TKP'
+                ? q.options.findIndex(opt => opt.score === 5)
+                : q.options.findIndex(opt => opt === q.answer);
+
+            const correctOption = correctIndex >= 0 ? q.options[correctIndex] : null;
+            const wrongOptions = q.options.filter((_, idx) => idx !== correctIndex);
+            shuffleArray(wrongOptions);
+
+            const targetPosition = positionPools[q.category][usedPosition[q.category]++];
+            const arranged = [];
+            let wrongIndex = 0;
+
+            for (let i = 0; i < 5; i++) {
+                if (i === targetPosition && correctOption !== null) {
+                    arranged.push(correctOption);
+                } else {
+                    arranged.push(wrongOptions[wrongIndex++]);
+                }
+            }
+
+            q.options = arranged;
         });
+
         return resultData;
     }
 
@@ -902,6 +944,36 @@ document.addEventListener('DOMContentLoaded', () => {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
+    }
+
+    function getCorrectOptionLetter(q) {
+        const correctIndex = q.category === 'TKP'
+            ? q.options.findIndex(opt => opt.score === 5)
+            : q.options.findIndex(opt => opt === q.answer);
+
+        return correctIndex >= 0 ? String.fromCharCode(65 + correctIndex) : '-';
+    }
+
+    function renderAnswerKey() {
+        const keyHTML = fullQuizData.map((q, idx) => `
+            <div class="bg-white border border-slate-200 rounded-lg px-3 py-2 text-center shadow-sm">
+                <div class="text-[10px] text-slate-500 font-bold">${idx + 1}</div>
+                <div class="text-lg font-black text-emerald-700">${getCorrectOptionLetter(q)}</div>
+            </div>
+        `).join('');
+
+        return `
+            <div class="mb-6 bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                <div class="flex items-center justify-between gap-3 mb-3">
+                    <div>
+                        <h4 class="font-black text-slate-800">Kunci Jawaban — Sesi Ini</h4>
+                        <p class="text-xs text-slate-500">Posisi jawaban diacak setiap sesi dan dibuat seimbang A–E per kategori.</p>
+                    </div>
+                    <div class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-full">${fullQuizData.length} Soal</div>
+                </div>
+                <div class="grid grid-cols-10 sm:grid-cols-11 md:grid-cols-15 gap-2">${keyHTML}</div>
+            </div>
+        `;
     }
 
     let currentQuestionIndex = 0;
@@ -1201,6 +1273,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             list.appendChild(card);
         });
+
+        // Kunci jawaban selalu ditempatkan paling akhir setelah seluruh pembahasan.
+        const answerKeyContainer = document.getElementById('answer-key-container');
+        if (answerKeyContainer) {
+            answerKeyContainer.innerHTML = renderAnswerKey();
+        }
     }
 
     document.querySelectorAll('#explanation-filters button').forEach(btn => {
